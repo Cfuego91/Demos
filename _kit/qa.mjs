@@ -107,7 +107,7 @@ for (const slug of targets) {
       const imgs = [...document.images];
       const small = [...document.querySelectorAll("p,li,a,span,label,small,td,dd,figcaption")].filter((el) => visible(el) && el.textContent.trim().length > 2 && el.children.length === 0 && parseFloat(getComputedStyle(el).fontSize) < 12).length;
       const tiny = [...document.querySelectorAll("button,a.btn,nav a,input:not([type=hidden]),select,textarea,[role=button]")].filter((el) => { if (!visible(el)) return false; const rc = el.getBoundingClientRect(); return Math.min(rc.width, rc.height) < 24; }).map((el) => (el.textContent || el.name || el.tagName).trim().slice(0, 25));
-      const anchors = [...document.querySelectorAll('a[href^="#"]')].map((a) => a.getAttribute("href")).filter((x) => x.length > 1 && !document.getElementById(decodeURIComponent(x.slice(1))));
+      const anchors = [...document.querySelectorAll('a[href^="#"]')].map((a) => a.getAttribute("href")).filter((x) => x.length > 1 && !x.startsWith("#/") && !document.getElementById(decodeURIComponent(x.slice(1)))); // "#/..." = app routes, not anchors
       return { overflow: document.documentElement.scrollWidth - vw, over, h1: document.querySelectorAll("h1").length,
         noAlt: imgs.filter((i) => !i.hasAttribute("alt")).length, broken: imgs.filter((i) => i.complete && i.naturalWidth === 0 && i.getAttribute("loading") !== "lazy").length,
         small, tiny: [...new Set(tiny)], anchors: [...new Set(anchors)],
