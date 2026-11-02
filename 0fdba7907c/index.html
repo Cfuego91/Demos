@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <title>Nowa VVS – VVS och gas i södra Stockholm</title>
 <meta name="description" content="Nowa VVS är en mindre VVS-entreprenör i södra Stockholm. VVS, gas och markarbeten med egen grävmaskin.">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Questrial&display=swap" rel="stylesheet">
@@ -84,7 +85,7 @@ footer{border-top:1px solid var(--ln);color:var(--mu);font-size:.85rem;padding:2
 <section class="alt" id="kontakt"><div class="wrap ct"><div><div class="ey">Kontakt</div><h2>Begär offert</h2>
 <p>Berätta kort om jobbet så återkommer vi.</p>
 <p>E-post: <a href="mailto:info@nowavvs.se">info@nowavvs.se</a></p><p>Orderbokning: <a href="mailto:order@nowavvs.se">order@nowavvs.se</a></p><p>Verksamhet: södra Stockholm och hela Stockholmsområdet</p><p>Norin Wahlberg VVS AB · Org.nr 559044-7305</p></div>
-<form onsubmit="event.preventDefault();var f=this;location.href='mailto:info@nowavvs.se?subject='+encodeURIComponent('Offertförfrågan från '+f.n.value)+'&body='+encodeURIComponent('Namn: '+f.n.value+'\nTelefon: '+f.t.value+'\n\n'+f.m.value)">
-<div><label>Namn<input name="n" required></label></div><div><label>Telefon<input name="t"></label></div><div><label>Vad gäller det?<textarea name="m" required></textarea></label></div><button class="btn bo" type="submit">Skicka förfrågan</button></form></div></section>
+<form method="dialog" data-demo-form onsubmit="event.preventDefault();var o=this.querySelector('.demo-ok');o.hidden=false;o.focus();this.querySelector('button[type=submit],button:not([type])').disabled=true">
+<div><label>Namn<input name="n" required></label></div><div><label>Telefon<input name="t"></label></div><div><label>Vad gäller det?<textarea name="m" required></textarea></label></div><button class="btn bo" type="submit">Skicka förfrågan</button><p class="demo-note" role="note" style="margin:.75rem 0 0;padding:.6rem .8rem;border:1px dashed currentColor;border-radius:6px;font-size:.85rem;line-height:1.4">Demoformulär: inga uppgifter skickas och inget meddelande når företaget.</p><p class="demo-ok" role="status" tabindex="-1" hidden style="margin:.75rem 0 0;padding:.6rem .8rem;border:1px dashed currentColor;border-radius:6px;font-size:.85rem;line-height:1.4;font-weight:600">Tack! Det här är en demo, så inget skickades. På den färdiga webbplatsen går förfrågan direkt till Nowa VVS.</p></form></div></section>
 <footer>© Norin Wahlberg VVS AB · Org.nr 559044-7305 · Vi innehar F-skatt · Designförslag (demo)</footer>
 </body></html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+{{robots}}
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<meta name="theme-color" content="{{themeColor}}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:locale" content="{{ogLocale}}">
+{{canonical}}
+{{fonts}}
+<style>
+:root{ {{tokens}} }
+{{css}}
+</style>
+{{jsonld}}
+</head>
+<body>
+<a class="skip" href="#main">{{t.skip}}</a>
+{{ribbon}}
+{{header}}
+<main id="main">
+{{sections}}
+</main>
+{{footer}}
+{{callbar}}
+<script>
+{{js}}
+</script>
+</body>
+</html>

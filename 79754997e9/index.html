@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <title>Andreas Jöhnemark Byggnadsfirma AB – Byggföretag i Stallarholmen sedan 1992</title>
 <meta name="description" content="Byggföretag i Stallarholmen med lång branscherfarenhet. Till- och nybyggnation, renovering av äldre hus och badrum, lösvirkeshus och byggprojektledning. Kostnadsfri offert.">
 <meta name="theme-color" content="#1e2a5a">
@@ -281,7 +282,7 @@ footer{background:var(--navy2);color:#cdd4ea;padding:46px 0 32px;font-size:.93re
         <a class="btn btn-out" href="https://www.instagram.com/andreasjohnemarkbyggnadsfirma/">Instagram</a>
       </div>
     </div>
-    <form id="quoteForm" autocomplete="on">
+    <form method="dialog" data-demo-form id="quoteForm" autocomplete="on">
       <div class="row2">
         <label>Namn<input name="namn" required autocomplete="name"></label>
         <label>Telefon<input name="tel" type="tel" required autocomplete="tel"></label>
@@ -303,8 +304,8 @@ footer{background:var(--navy2);color:#cdd4ea;padding:46px 0 32px;font-size:.93re
         <textarea name="besk" placeholder="Vad vill du göra, och när vill du helst att det ska vara klart?"></textarea>
       </label>
       <button class="btn btn-red" type="submit">Skicka förfrågan</button>
-      <p class="fine">Du kan bifoga bilder i mejlet som öppnas. I demon skickas förfrågan via ditt e-postprogram.</p>
-    </form>
+      <p class="fine">På den färdiga webbplatsen kan du även bifoga bilder.</p>
+    <p class="demo-note" role="note" style="margin:.75rem 0 0;padding:.6rem .8rem;border:1px dashed currentColor;border-radius:6px;font-size:.85rem;line-height:1.4">Demoformulär: inga uppgifter skickas och inget meddelande når företaget.</p><p class="demo-ok" role="status" tabindex="-1" hidden style="margin:.75rem 0 0;padding:.6rem .8rem;border:1px dashed currentColor;border-radius:6px;font-size:.85rem;line-height:1.4;font-weight:600">Tack! Det här är en demo, så inget skickades. På den färdiga webbplatsen går förfrågan direkt till Andreas Jöhnemark Byggnadsfirma.</p></form>
   </div>
 </section>
 
@@ -330,7 +331,7 @@ footer{background:var(--navy2);color:#cdd4ea;padding:46px 0 32px;font-size:.93re
     e.preventDefault();
     var f=e.target,v=function(n){return f.elements[n].value.trim();};
     var body='Namn: '+v('namn')+'\nTelefon: '+v('tel')+'\nE-post: '+v('mail')+'\nOrt: '+v('ort')+'\nTyp av jobb: '+v('typ')+'\n\n'+v('besk');
-    location.href='mailto:andreas@johnemark.se?subject='+encodeURIComponent('Offertförfrågan: '+v('typ'))+'&body='+encodeURIComponent(body);
+    var o=f.querySelector('.demo-ok');o.hidden=false;o.focus();f.querySelector('button[type=submit]').disabled=true;void body;
   });
 </script>
 </body>

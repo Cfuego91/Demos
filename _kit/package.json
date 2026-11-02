@@ -1,0 +1,15 @@
+{
+  "name": "vexari-demo-kit",
+  "private": true,
+  "description": "Builds and checks client demos. Not published, no runtime dependencies.",
+  "type": "module",
+  "scripts": {
+    "new": "node build.mjs new",
+    "build": "node build.mjs",
+    "qa": "node qa.mjs"
+  },
+  "devDependencies": {
+    "axe-core": "4.10.3",
+    "playwright": "1.56.1"
+  }
+}

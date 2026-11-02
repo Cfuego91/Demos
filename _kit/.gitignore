@@ -1,0 +1,3 @@
+node_modules/
+# Leads, audits, client notes and QA output stay local. Never commit them to this public repo.
+private/

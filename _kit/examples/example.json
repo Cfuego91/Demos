@@ -1,0 +1,100 @@
+{
+  "$comment": "EXEMPEL med påhittat företag. Kopiera med: node _kit/build.mjs new <kundnamn>. Fyll bara i verifierade uppgifter.",
+  "slug": "",
+  "out": "_kit/example",
+  "mode": "demo",
+  "lang": "sv",
+  "preparedBy": "Vexari",
+  "company": {
+    "name": "Exempelfirman Rör & Värme AB",
+    "shortName": "Exempelfirman",
+    "industry": "VVS",
+    "tagline": "VVS, värme och badrum i Exempelstad med omnejd.",
+    "phone": "08-000 000 00",
+    "email": "info@example.com",
+    "address": "Exempelgatan 1, 123 45 Exempelstad",
+    "area": "Exempelstad och grannkommunerna",
+    "hours": "Vardagar 07–16"
+  },
+  "seo": {
+    "title": "Exempelfirman – VVS och badrum i Exempelstad",
+    "description": "Rörmokare i Exempelstad för badrumsrenovering, värmepumpar och akuta läckor. Fast pris efter hembesök. Begär offert eller ring oss."
+  },
+  "theme": {
+    "primary": "#14507a",
+    "accent": "#e8732c",
+    "ink": "#16202a",
+    "bg": "#ffffff",
+    "dark": "#0d2235",
+    "fonts": "sturdy",
+    "radius": "soft",
+    "hero": "solid"
+  },
+  "hero": {
+    "eyebrow": "Rörmokare i Exempelstad",
+    "title": "VVS-jobb som blir rätt från början",
+    "lead": "Badrum, värme och akuta läckor. Vi kommer på hembesök, ger ett fast pris och håller tiden vi lovar.",
+    "cta": "Begär offert",
+    "badges": [
+      { "text": "Exempel: Säker Vatten-auktoriserade", "source": "https://example.com/verifiera-certifikat" },
+      { "text": "Exempel: Fast pris efter hembesök", "source": "https://example.com/nuvarande-webbplats" }
+    ]
+  },
+  "services": {
+    "title": "Det här hjälper vi dig med",
+    "intro": "Från ett droppande blandare till ett helt nytt badrum. Ett samtal räcker för att komma igång.",
+    "items": [
+      { "icon": "drop", "title": "Badrumsrenovering", "text": "Rivning, tätskikt, rör och montering. Vi samordnar plattsättare och el så du har **en kontakt**." },
+      { "icon": "thermo", "title": "Värme och värmepumpar", "text": "Byte av varmvattenberedare, radiatorer och installation av luft-vattenvärmepump." },
+      { "icon": "wrench", "title": "Service och akuta läckor", "text": "Stopp i avlopp, läckande rör eller trasig toalett. Ring så prioriterar vi akuta fall." }
+    ]
+  },
+  "benefits": {
+    "title": "Därför väljer kunder oss",
+    "items": [
+      { "icon": "check", "title": "Fast pris före start", "text": "Du får ett skriftligt pris efter hembesöket. Inga överraskningar på fakturan." },
+      { "icon": "clock", "title": "Vi håller tiden", "text": "Du får en starttid och en plan. Ändras något hör vi av oss direkt." },
+      { "icon": "shield", "title": "Ordning på papperen", "text": "Intyg och dokumentation lämnas när jobbet är klart, så du har dem vid försäkringsärenden." },
+      { "icon": "phone", "title": "En kontaktperson", "text": "Samma person från offert till slutbesiktning. Du vet alltid vem du ska ringa." }
+    ]
+  },
+  "process": {
+    "title": "Så går det till",
+    "steps": [
+      { "title": "Hör av dig", "text": "Ring eller skicka en förfrågan. Vi återkommer samma arbetsdag." },
+      { "title": "Hembesök och fast pris", "text": "Vi tittar på jobbet på plats och skickar ett skriftligt pris." },
+      { "title": "Vi gör jobbet", "text": "Arbetet utförs enligt plan och du får dokumentation när det är klart." }
+    ]
+  },
+  "about": {
+    "title": "Ett lokalt VVS-företag",
+    "text": [
+      "Exempelfirman är ett påhittat företag som visar hur kitet ser ut. Här skriver du kundens egen historia: vem som driver företaget, hur länge de funnits och vad de är stolta över.",
+      "Använd bara uppgifter som går att kontrollera på kundens webbplats, Allabolag, Google-profil eller som kunden själv har bekräftat."
+    ],
+    "facts": [
+      { "value": "1998", "label": "Exempel: grundat", "source": "https://example.com/allabolag" },
+      { "value": "6", "label": "Exempel: anställda", "source": "https://example.com/allabolag" }
+    ]
+  },
+  "references": {
+    "title": "Vad kunderna säger",
+    "intro": "Bara verifierade omdömen, med länk till källan.",
+    "items": [
+      { "quote": "Exempeltext. Ersätts med ett verkligt omdöme från kundens Google-profil eller webbplats, ordagrant.", "name": "Förnamn E.", "context": "Badrumsrenovering", "source": "https://example.com/google-omdome", "sourceLabel": "Google-omdöme (exempel)" }
+    ]
+  },
+  "faq": {
+    "items": [
+      { "q": "Kan jag få ett fast pris?", "a": "Ja. Efter hembesöket får du ett skriftligt fast pris för det vi har gått igenom." },
+      { "q": "Hur snabbt kan ni komma vid en läcka?", "a": "Akuta läckor prioriteras. Ring oss direkt så berättar vi när vi kan vara på plats." },
+      { "q": "Hjälper ni till med ROT-avdrag?", "a": "Ja, vi drar av ROT direkt på fakturan när arbetet uppfyller Skatteverkets villkor." },
+      { "q": "Vilka områden jobbar ni i?", "a": "Exempelstad och grannkommunerna. Hör av dig om du är osäker." }
+    ]
+  },
+  "contact": {
+    "title": "Berätta om ditt jobb",
+    "lead": "Skicka en förfrågan eller ring. Vi svarar samma arbetsdag.",
+    "formTitle": "Begär offert"
+  }
+}

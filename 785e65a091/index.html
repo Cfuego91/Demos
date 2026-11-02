@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <title>Dahl Bygg – Måleri, snickeri och renovering i Stor-Stockholm</title>
 <meta name="description" content="Dahl Bygg utför måleri, snickeri, rivning och helrenovering i Stor-Stockholm. Begär offert.">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -79,7 +80,7 @@ footer{background:var(--dk2);color:#9fb6c0;font-size:.85rem;padding:26px 0;text-
 <section class="ct" id="kontakt"><div class="w cg"><div><div class="ey" style="color:#7cc6e0">Kontakt</div><h2>Begär offert</h2>
 <p>Berätta kort om ditt projekt så återkommer vi.</p>
 <p>Telefon: <a href="tel:+46703773707">070-377 37 07</a></p><p>E-post: <a href="mailto:info@dahlbygg.se">info@dahlbygg.se</a></p><p>Adress: Franstorpsvägen 11, 172 66 Sundbyberg</p><p>Vi arbetar i hela Stor-Stockholm.</p></div>
-<form onsubmit="event.preventDefault();var f=this;location.href='mailto:info@dahlbygg.se?subject='+encodeURIComponent('Offertförfrågan från '+f.n.value)+'&body='+encodeURIComponent('Namn: '+f.n.value+'\nTelefon: '+f.t.value+'\n\n'+f.m.value)">
-<div><label>Namn<input name="n" required></label></div><div><label>Telefon<input name="t"></label></div><div><label>Vad vill du ha hjälp med?<textarea name="m" required></textarea></label></div><button class="btn bb" type="submit">Skicka förfrågan</button></form></div></section>
+<form method="dialog" data-demo-form onsubmit="event.preventDefault();var o=this.querySelector('.demo-ok');o.hidden=false;o.focus();this.querySelector('button[type=submit],button:not([type])').disabled=true">
+<div><label>Namn<input name="n" required></label></div><div><label>Telefon<input name="t"></label></div><div><label>Vad vill du ha hjälp med?<textarea name="m" required></textarea></label></div><button class="btn bb" type="submit">Skicka förfrågan</button><p class="demo-note" role="note" style="margin:.75rem 0 0;padding:.6rem .8rem;border:1px dashed currentColor;border-radius:6px;font-size:.85rem;line-height:1.4">Demoformulär: inga uppgifter skickas och inget meddelande når företaget.</p><p class="demo-ok" role="status" tabindex="-1" hidden style="margin:.75rem 0 0;padding:.6rem .8rem;border:1px dashed currentColor;border-radius:6px;font-size:.85rem;line-height:1.4;font-weight:600">Tack! Det här är en demo, så inget skickades. På den färdiga webbplatsen går förfrågan direkt till Dahl Bygg.</p></form></div></section>
 <footer>© Dahl MPC Bygg AB · Org.nr 556948-0469 · Franstorpsvägen 11, 172 66 Sundbyberg · Designförslag (demo)</footer>
 </body></html>
