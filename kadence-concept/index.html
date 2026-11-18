@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<title>Kadence concept demo · VEXARI Agency</title>
+<meta name="description" content="Concept demo for a fictional consulting firm, built by VEXARI Agency with WordPress, Gutenberg, Kadence Theme and Kadence Blocks.">
+<style>
+  :root { --ink: #1f2933; --muted: #52606d; --navy: #0f2742; --gold: #8a5d12; --line: #d9e2ec; --bg: #ffffff; --bg2: #f4f6f9; }
+  @media (prefers-color-scheme: dark) { :root { --ink: #e6edf3; --muted: #a9b6c3; --navy: #e6edf3; --gold: #f0c27a; --line: #2b3946; --bg: #0d1520; --bg2: #13202e; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); }
+  .banner { background: #8a5d12; color: #fff; text-align: center; font-weight: 600; padding: 10px 16px; }
+  main { max-width: 1100px; margin: 0 auto; padding: 40px 16px 64px; }
+  h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.15; margin: 0 0 12px; color: var(--navy); }
+  h2 { font-size: 1.35rem; margin: 48px 0 12px; color: var(--navy); }
+  p.lead { font-size: 1.12rem; color: var(--muted); max-width: 46rem; margin: 0; }
+  .facts { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin: 28px 0 0; padding: 0; list-style: none; }
+  .facts li { background: var(--bg2); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .facts b { display: block; font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+  figure { margin: 0 0 28px; }
+  figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 12px; }
+  figcaption { font-size: .92rem; color: var(--muted); margin-top: 8px; }
+  .pair { display: grid; gap: 24px; grid-template-columns: 1fr; align-items: start; }
+  @media (min-width: 820px) { .pair { grid-template-columns: 2fr 1fr; } }
+  .mobile img { max-height: 900px; object-fit: cover; object-position: top; }
+  ul.list li { margin: 6px 0; }
+  a { color: var(--gold); }
+  footer { border-top: 1px solid var(--line); margin-top: 48px; padding-top: 16px; font-size: .9rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="banner" role="note">Concept demo · Harbourline Advisory is a fictional company · Not client work</div>
+<main>
+  <h1>WordPress + Kadence concept demo</h1>
+  <p class="lead">A one-page website for a fictional management consulting firm, built by VEXARI Agency to show how we work with WordPress, the Gutenberg block editor, Kadence Theme and Kadence Blocks. Built and tested locally; it is not a live site.</p>
+  <ul class="facts">
+    <li><b>Platform</b>WordPress 7.1.5, Gutenberg</li>
+    <li><b>Theme &amp; blocks</b>Kadence Theme 1.6.0 · Kadence Blocks 3.9.1.1 (free versions)</li>
+    <li><b>Checks</b>0 axe WCAG 2.2 AA issues · no horizontal scroll on mobile</li>
+    <li><b>Editable</b>48 Kadence/Gutenberg blocks, all valid in the editor</li>
+  </ul>
+
+  <h2>Desktop and mobile</h2>
+  <div class="pair">
+    <figure><img src="images/01-desktop-hero.png" width="2880" height="1800" alt="Desktop view of the hero section: navy background, headline 'Clear strategy. Practical change. Measurable progress.' and two buttons, with a concept demo label." loading="lazy"><figcaption>Desktop, 1440 px. <a href="images/02-desktop-full.png">Full page</a>.</figcaption></figure>
+    <figure class="mobile"><img src="images/03-mobile-full.png" width="1170" height="10428" alt="Mobile view of the full page: hero, three service cards with icons, approach list, FAQ accordion and call to action." loading="lazy"><figcaption>Mobile, 390 px. <a href="images/03-mobile-full.png">Full page</a>.</figcaption></figure>
+  </div>
+  <figure><img src="images/04-gutenberg-kadence-editor.png" width="2880" height="1800" alt="The page open in the WordPress block editor, with the Kadence Advanced Text block settings panel visible." loading="lazy"><figcaption>The page in the Gutenberg editor, with Kadence block settings.</figcaption></figure>
+
+  <h2>Kadence features used</h2>
+  <ul class="list">
+    <li>Row Layout and Section blocks: 1, 2 and 3 columns, full-width backgrounds, responsive padding</li>
+    <li>Advanced Text headings with responsive size presets, colours and anchor links for the menu</li>
+    <li>Advanced Buttons, Info Boxes with icons, Icon List, and an Accordion for the FAQ</li>
+    <li>Kadence Theme page settings (hidden title, full width, unboxed) and the header with a mobile menu drawer</li>
+  </ul>
+
+  <h2>Honest scope</h2>
+  <p>This is a test site made by VEXARI Agency for a fictional company. It is not a project delivered to a paying client, and no Kadence Pro features were used. The files needed to rebuild it are in the <a href="https://github.com/Cfuego91/Demos/tree/main/kadence-concept">repository folder</a>.</p>
+
+  <footer>VEXARI Agency · concept demo · <a href="https://vexari.agency">vexari.agency</a></footer>
+</main>
+</body>
+</html>

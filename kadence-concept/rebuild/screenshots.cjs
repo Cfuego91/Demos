@@ -1,0 +1,25 @@
+const { chromium } = require("playwright");
+const OUT = process.env.OUT_DIR || ".";
+const LABEL = "VEXARI concept demo · Fictional company · Built with WordPress, Gutenberg, Kadence Theme & Kadence Blocks";
+const tag = async (p) => p.evaluate((t) => { const d = document.createElement("div"); d.textContent = t; d.setAttribute("style", "position:relative;z-index:99999;background:#b07a1e;color:#fff;font:600 14px/1.4 system-ui,sans-serif;padding:8px 14px;text-align:center"); document.body.prepend(d); }, LABEL);
+(async () => {
+  const b = await chromium.launch({ ...(process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {}) });
+  let ctx = await b.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 2 }); let p = await ctx.newPage();
+  await p.goto("http://127.0.0.1:8090/", { waitUntil: "networkidle" }); await tag(p);
+  await p.screenshot({ path: `${OUT}/01-desktop-hero.png` });
+  await p.screenshot({ path: `${OUT}/02-desktop-full.png`, fullPage: true });
+  await ctx.close();
+  ctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 3, isMobile: true, hasTouch: true }); p = await ctx.newPage();
+  await p.goto("http://127.0.0.1:8090/", { waitUntil: "networkidle" }); await tag(p);
+  await p.screenshot({ path: `${OUT}/03-mobile-full.png`, fullPage: true });
+  await ctx.close();
+  ctx = await b.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 2 }); p = await ctx.newPage(); p.setDefaultTimeout(120000);
+  await p.goto("http://127.0.0.1:8090/wp-login.php"); await p.fill("#user_login", "demo-admin"); await p.fill("#user_pass", process.env.WP_ADMIN_PASS);
+  await Promise.all([p.waitForNavigation(), p.click("#wp-submit")]);
+  await p.goto("http://127.0.0.1:8090/wp-admin/post.php?post=5&action=edit");
+  await p.waitForFunction(() => window.wp?.data?.select("core/block-editor")?.getBlocks()?.length > 0); await p.waitForTimeout(3000);
+  await p.evaluate(() => { try { wp.data.dispatch("core/preferences").set("core/edit-post", "welcomeGuide", false); } catch {} const ids = wp.data.select("core/block-editor").getBlocks(); wp.data.dispatch("core/block-editor").selectBlock(ids[1].innerBlocks[0].innerBlocks[0]?.clientId || ids[1].clientId); wp.data.dispatch("core/edit-post").openGeneralSidebar?.("edit-post/block"); });
+  await p.waitForTimeout(1500); await tag(p);
+  await p.screenshot({ path: `${OUT}/04-gutenberg-kadence-editor.png` });
+  await b.close();
+})();
